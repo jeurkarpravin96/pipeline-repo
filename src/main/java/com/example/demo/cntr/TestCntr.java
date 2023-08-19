@@ -36,4 +36,15 @@ public class TestCntr {
 		LocalDateTime date=LocalDateTime.now();
 		return "Welcome to the Pipeline Spring Boot Project - "+date+" Webhook added";
 	}
+	@RequestMapping(value = "webhookpush",method =RequestMethod.GET)
+	public String getWebhookPush() {
+		LocalDateTime date=LocalDateTime.now();
+		return "Welcome to the Pipeline Spring Boot Project - "+date+" Webhook push code to master";
+	}
+	
+	@RequestMapping(value = "webhookpull",method =RequestMethod.GET)
+	public String getWebhookPull() {
+		LocalDateTime date=LocalDateTime.now();
+		return "Welcome to the Pipeline Spring Boot Project - "+date+" Webhook pull request merged";
+	}
 }
