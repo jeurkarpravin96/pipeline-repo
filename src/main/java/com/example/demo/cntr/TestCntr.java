@@ -30,4 +30,10 @@ public class TestCntr {
 		return "Welcome to the Pipeline Spring Boot Project - "+date+" "
 				+ "- Great you have done proper deployement through jenkins";
 	}
+	
+	@RequestMapping(value = "webhook",method =RequestMethod.GET)
+	public String getWebhook() {
+		LocalDateTime date=LocalDateTime.now();
+		return "Welcome to the Pipeline Spring Boot Project - "+date+" Webhook added on push pull request";
+	}
 }
